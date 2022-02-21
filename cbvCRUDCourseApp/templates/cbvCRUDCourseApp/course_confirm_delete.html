@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'cbvCRUDCourseApp/base.html' %}
+{% block title_block %}
     <title>Delete Course</title>
-</head>
-<body>
+{% endblock %}
+{% block body_block %}
     <h1>Delete Course {{course.name}}</h1>
     <form method="post">
         <input type="submit" value="Confirm" />
         <a href="/{{course.id}}">Cancel</a>
         {% csrf_token %}
     </form>
-</body>
-</html>
+{% endblock %}

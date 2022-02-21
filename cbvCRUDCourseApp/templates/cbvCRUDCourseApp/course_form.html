@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'cbvCRUDCourseApp/base.html' %}
+{% block title_block %}
     <title>Add Course</title>
-</head>
-<body>
+{% endblock %}
+{% block body_block %}
     <a href="/courses">Courses List</a>
     <h1>Add Course</h1>
     <form method="post">
@@ -14,5 +12,4 @@
         </table>
         <input type="submit" value="Add Course" />
     </form>
-</body>
-</html>
+{% endblock %}

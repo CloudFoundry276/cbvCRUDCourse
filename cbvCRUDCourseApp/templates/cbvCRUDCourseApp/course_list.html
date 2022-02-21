@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'cbvCRUDCourseApp/base.html' %}
+{% block title_block %}
     <title>Courses List</title>
-</head>
-<body>
+{% endblock %}
+{% block body_block %}
+    {% load custFilters %}
     <a href="/create">Add Course</a>
     <h1>Courses List</h1>
     <table border="1">
@@ -22,9 +21,9 @@
             {% for course in course_list %}
             <tr>
                 <td><a href="/{{course.id}}">{{course.id}}</a></td>
-                <td><a href="/{{course.id}}">{{course.name}}</a></td>
+                <td><a href="/{{course.id}}">{{course.name | myLower}}</a></td>
                 <td><a href="/{{course.id}}">{{course.description}}</a></td>
-                <td><a href="/{{course.id}}">{{course.instructor}}</a></td>
+                <td><a href="/{{course.id}}">{{course.instructor | myAppend:"Author: " | title}}</a></td>
                 <td><a href="/{{course.id}}">{{course.rating}}</a></td>
             </tr>
             {% endfor %}
@@ -35,5 +34,4 @@
         {% endif %}
         </tbody>
     </table>
-</body>
-</html>
+{% endblock %}

@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'cbvCRUDCourseApp/base.html' %}
+{% block title_block %}
     <title>Course Details</title>
+{% endblock %}
+{% block style_block %}
     <style>
         li {
             list-style-type: none;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+{% block body_block %}
     <a href="/courses">Courses List</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/create">Add Course</a>
@@ -25,5 +25,4 @@
             <a href="/delete/{{course.id}}">Delete</a>
         </li>
     </ol>
-</body>
-</html>
+{% endblock %}
