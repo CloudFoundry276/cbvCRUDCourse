@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Details</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="/courses">Courses List</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/create">Add Course</a>
+    <h1>Course Details</h1>
+    <ol>
+        <li><h3>Name: {{course.name}}</h3></li>
+        <li><h3>Description: {{course.description}}</h3></li>
+        <li><h3>Instructor: {{course.instructor}}</h3></li>
+        <li><h3>Rating: {{course.rating}}</h3></li>
+        <li>
+            <a href="/update/{{course.id}}">Update</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/delete/{{course.id}}">Delete</a>
+        </li>
+    </ol>
+</body>
+</html>
